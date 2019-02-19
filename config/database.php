@@ -1,6 +1,6 @@
 <?php
 
-$DATABASE_URL = parse_url('Your database URL');
+$DATABASE_URL = parse_url('postgres://xoazfqiskgkjes:b546b662dfcbcab674bd2095e63ed8d8921d8e9d35dbd363e2b1da59f1d40678@ec2-54-163-234-88.compute-1.amazonaws.com:5432/dau670b49dfcg5');
 
 return [
 
