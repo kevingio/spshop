@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="icon" type="image/png" href="{{ asset('app-asset/images/icons/favicon.png') }}"/>
+        <link rel="icon" type="image/png" href="{{ asset('app-asset/images/icons/favicon.png', true) }}"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" href="{{ asset('app-asset/css/login.css') }}">
+        <link rel="stylesheet" href="{{ asset('app-asset/css/login.css', true) }}">
         <title>Login</title>
     </head>
     <body>
