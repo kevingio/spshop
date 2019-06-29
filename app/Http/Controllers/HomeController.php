@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {
         $brands = $this->brand->all();
-        $cart = empty(session()->get('cart')) ? [] : session()->get('cart');
+        $cart = session()->get('cart');
         $featured_products = $this->smartphone->with('image')->orderBy('created_at', 'desc')->take(15)->get();
         return view('web.home', compact('brands', 'featured_products', 'cart'));
     }
@@ -42,7 +42,7 @@ class HomeController extends Controller
      */
     public function showProfile()
     {
-        $cart = empty(session()->get('cart')) ? [] : session()->get('cart');
+        $cart = session()->get('cart');
         $user = auth()->user();
         return view('web.profile', compact('user', 'cart'));
     }
@@ -69,7 +69,7 @@ class HomeController extends Controller
      */
     public function mystore(Request $request)
     {
-        $cart = empty(session()->get('cart')) ? [] : session()->get('cart');
+        $cart = session()->get('cart');
         $store = $this->store->where('user_id', auth()->user()->id)->first();
         if(empty($store)) {
             $store = $this->store->create([
@@ -100,6 +100,7 @@ class HomeController extends Controller
         }
         $smartphones = $smartphones->paginate(12);
         $smartphones->appends(request()->input())->links();
+        // dd(empty($smartphones[0]->image));
         return view('web.mystore.index', compact('smartphones', 'store', 'brands', 'cart'));
     }
 
@@ -110,7 +111,7 @@ class HomeController extends Controller
      */
     public function bargainList()
     {
-        $cart = empty(session()->get('cart')) ? [] : session()->get('cart');
+        $cart = session()->get('cart');
         $bargain_list = $this->bargain_list->with(['user'])
                                         ->whereHas('smartphone', function ($query) {
                                             $query->whereHas('store', function ($inner_query) {

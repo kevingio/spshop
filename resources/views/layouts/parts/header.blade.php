@@ -67,9 +67,9 @@
 
                 <div class="header-wrapicon2">
                     <img src="{{ asset('app-asset/images/icons/icon-header-02.png') }}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">{{ sizeof($cart['data']) }}</span>
+                    <span class="header-icons-noti">{{ empty($cart['data']) ? 0 : sizeof($cart['data']) }}</span>
 
-                    @if(sizeof($cart['data']) > 0)
+                    @if(!empty($cart['data']))
                     <div class="header-cart header-dropdown">
                         <ul class="header-cart-wrapitem">
                             @foreach($cart['data'] as $item)
