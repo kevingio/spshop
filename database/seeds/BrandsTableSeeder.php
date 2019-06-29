@@ -24,7 +24,7 @@ class BrandsTableSeeder extends Seeder
 
         Brand::create([
             'name' => 'Xiaomi',
-            'logo' => 'http://pluspng.com/img-png/xiaomi-vector-png-mi-logo-2090.png'
+            'logo' => 'https://pluspng.com/img-png/xiaomi-vector-png-mi-logo-2090.png'
         ]);
 
         Brand::create([
@@ -34,12 +34,12 @@ class BrandsTableSeeder extends Seeder
 
         Brand::create([
             'name' => 'LG',
-            'logo' => 'https://png2.kisspng.com/20171216/330/5a3555e28b15c5.1941689115134448345697.png'
+            'logo' => 'https://www.dumetschool.com/uploads/fck//lg-logo.png'
         ]);
 
         Brand::create([
             'name' => 'Vivo',
-            'logo' => 'http://pic3.16pic.com/00/01/45/16pic_145196_b.jpg'
+            'logo' => 'https://cdn.freebiesupply.com/logos/large/2x/vivo-1-logo-png-transparent.png'
         ]);
 
     }

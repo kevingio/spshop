@@ -97,8 +97,9 @@ class ProductController extends Controller
     public function show($id)
     {
         $cart = session()->get('cart');
-        $smartphone = $this->smartphone->findOrFail($id);
-        $related_products = $this->smartphone->where('brand_id', $smartphone->brand_id)
+        $smartphone = $this->smartphone->with('store')->findOrFail($id);
+        $related_products = $this->smartphone->with('store')
+                                                ->where('brand_id', $smartphone->brand_id)
                                                 ->where('id', '!=', $smartphone->id)
                                                 ->take(12)
                                                 ->get();
