@@ -20,5 +20,5 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     RewriteCond %{SERVER_PORT} 80
-    RewriteRule ^(.*)$ https://olshop-dev.herokuapp.com/$1 [R=301,L]
+    # RewriteRule ^(.*)$ https://olshop-dev.herokuapp.com/$1 [R=301,L]
 </IfModule>
