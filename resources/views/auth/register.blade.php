@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="icon" type="image/png" href="{{ asset('app-asset/images/icons/favicon.png') }}"/>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <link rel="icon" type="image/png" href="{{ asset('app-asset/images/icons/favicon.png', true) }}"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link rel="stylesheet" href="{{ asset('app-asset/css/login.css') }}">
+        <link rel="stylesheet" href="{{ asset('app-asset/css/login.css', true) }}">
         <title>Register</title>
     </head>
     <body>
@@ -15,7 +16,7 @@
 
             <!-- Icon -->
             <div class="fadeIn first my-5">
-              <img src="{{ asset('app-asset/images/icons/logo.png') }}" id="icon" alt="User Icon" />
+              <img src="{{ asset('app-asset/images/icons/logo.png', true) }}" id="icon" alt="User Icon" />
             </div>
 
             @if(!empty($errors->first('email')))

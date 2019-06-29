@@ -34,7 +34,7 @@
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-              <a class="underlineHover" href="{{ url('/') }}">Go to the Site</a>
+              <a class="underlineHover" href="{{ route('home') }}">Go to the Site</a>
             </div>
 
           </div>
