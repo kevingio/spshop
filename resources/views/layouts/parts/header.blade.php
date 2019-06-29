@@ -67,15 +67,15 @@
 
                 <div class="header-wrapicon2">
                     <img src="{{ asset('app-asset/images/icons/icon-header-02.png') }}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">{{ count($cart['data']) }}</span>
+                    <span class="header-icons-noti">{{ sizeof($cart['data']) }}</span>
 
-                    @if(count($cart['data']) > 0)
+                    @if(sizeof($cart['data']) > 0)
                     <div class="header-cart header-dropdown">
                         <ul class="header-cart-wrapitem">
                             @foreach($cart['data'] as $item)
                             <li class="header-cart-item" data-id="{{ $item->id }}" name-product="{{ $item->name }}">
                                 <div class="header-cart-item-img">
-                                    <img src="{{ count($item->image) > 0 ? Storage::url($item->image[0]->filename)  : 'https://www.91-img.com/pictures/119660-v10-samsung-galaxy-note-9-mobile-phone-large-1.jpg' }}" alt="IMG">
+                                    <img src="{{ sizeof($item->image) > 0 ? Storage::url($item->image[0]->filename)  : 'https://www.91-img.com/pictures/119660-v10-samsung-galaxy-note-9-mobile-phone-large-1.jpg' }}" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">
