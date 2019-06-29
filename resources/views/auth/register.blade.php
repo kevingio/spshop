@@ -32,7 +32,7 @@
               <input type="password" class="fadeIn third" name="password_confirmation" autocomplete="off" placeholder="confirm password" required>
               <button type="submit" class="fadeIn fourth mb-2">Register</button>
               <br>
-              <a href="{{ url('/login') }}" class="my-4">Login</a>
+              <a href="{{ route('login') }}" class="my-4">Login</a>
             </form>
 
             <!-- Remind Passowrd -->

@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <link rel="icon" type="image/png" href="{{ asset('app-asset/images/icons/favicon.png') }}"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" href="{{ asset('app-asset/css/login.css') }}">
@@ -29,7 +30,7 @@
               <input type="password" id="password" class="fadeIn third" name="password" autocomplete="off" placeholder="password" required>
               <button type="submit" class="fadeIn fourth">Log In</button>
               <br>
-              <a href="{{ url('/register') }}" class="my-4">Register</a>
+              <a href="{{ route('register') }}" class="my-4">Register</a>
             </form>
 
             <!-- Remind Passowrd -->
